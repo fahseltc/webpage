@@ -1,0 +1,11 @@
+---
+layout: layout.html
+title: Projects
+subtitle: A collection of projects I have worked on
+permalink: projects.html
+---
+{% for project in collections.project %}
+	<h3>{{ project.data.title }}</h3>
+	<img src="{{ project.data.image }}"></img>
+	<p>{{ project.content }}</p>
+{% endfor %}
