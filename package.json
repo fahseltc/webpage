@@ -4,10 +4,12 @@
   "description": "",
   "main": ".eleventy.js",
   "scripts": {
+		"predeploy": "npm run build",
+		"deploy": "gh-pages -d _site",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npx @11ty/eleventy && cpx img/* _site/img",
-		"clean": "rd /s /q _site",
-		"serve": "npx @11ty/eleventy --serve"
+    "clean": "rd /s /q _site",
+    "serve": "npx @11ty/eleventy --serve"
   },
   "repository": {
     "type": "git",
@@ -20,6 +22,9 @@
   },
   "homepage": "https://github.com/fahseltc/webpage#readme",
   "dependencies": {
-    "cpx": "^1.5.0"
+    "cpx": "^1.2.1"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.1.1"
   }
 }
