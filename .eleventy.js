@@ -3,9 +3,15 @@ const NOT_FOUND_PATH = "_site/404.html";
 
 module.exports = {
 	// Output directory: _site
-	function(eleventyConfig) { eleventyConfig.setServerPassthroughCopyBehavior("passthrough"); },
-	function(eleventyConfig) { eleventyConfig.setTemplateFormats(["md", "html",  "png", "jpg", "svg"])},
-	function(eleventyConfig) { eleventyConfig.addPassthroughCopy("css")},
+	// function(eleventyConfig) {
+	// 	eleventyConfig.addPassthroughCopy("**/*.jpg");
+	// },
+	// function(eleventyConfig) {
+	// 	eleventyConfig.addPassthroughCopy("css");
+	// },
+	// function(eleventyConfig) {
+	// 	eleventyConfig.addPassthroughCopy("./img");
+	// },
 
 	function(eleventyConfig) {
 		eleventyConfig.setBrowserSyncConfig({
@@ -28,5 +34,5 @@ module.exports = {
 				},
 			},
 		});
-	}
+	},
 };

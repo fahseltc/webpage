@@ -6,6 +6,6 @@ permalink: projects.html
 ---
 {% for project in collections.project %}
 	<h3>{{ project.data.title }}</h3>
-	<img src="{{ project.data.image }}"></img>
-	<p>{{ project.content }}</p>
+	<img src="{{ project.data.image }}" width="100" height ="100" />
+	<p>{{ project.data.description }}</p>
 {% endfor %}
